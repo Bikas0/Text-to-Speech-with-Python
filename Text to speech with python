@@ -1,0 +1,32 @@
+###### 18 June 2021
+
+from gtts import gTTS
+
+# This module is imported so that we can 
+# play the converted audio
+
+from IPython.display import Audio
+ 
+# The text that you want to convert to audio
+
+x = "/content/drive/MyDrive/bikasu.txt"
+file = open(x, "r").read().replace("\n", " ")
+
+#x = input()
+#text = gTTS(x)
+
+# Language in which you want to convert
+
+#language = 'en'
+language = 'fr'
+
+# Passing the text and language to the engine, here we have marked slow=False. Which tells the module that the converted audio should have a high speed
+
+myobj = gTTS(text=file, lang=language, slow=False)
+
+# Saving the converted audio in a mp3 file named
+# welcome 
+
+myobj.save("bikas.wav")
+
+Audio('bikas.wav', autoplay=True)

@@ -1,6 +1,6 @@
 ###### 18 June 2021
 
-from gtts import gTTS
+from gtts import gTTS ### gtts means Google Text to Speech
 
 # This module is imported so that we can 
 # play the converted audio
